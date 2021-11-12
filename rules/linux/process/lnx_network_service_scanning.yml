@@ -1,0 +1,23 @@
+id: 3e102cd9-a70d-4a7a-9508-403963092f31
+meta:
+  author: phil
+  description: Detects enumeration of local or remote network services.
+  title: Linux Network Service Scanning
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1046/T1046.md
+and: true
+enabled: true
+rules:
+  exe_file:
+    data:
+      - /nc
+      - /netcat
+      - /telnet
+      - /nmap
+    type: endswith
+source: process
+system: linux
+level: informational
+tags:
+  - attack.discovery
+  - attack.t1046

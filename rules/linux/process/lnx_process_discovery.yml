@@ -1,0 +1,21 @@
+id: 4e2f5868-08d4-413d-899f-dc2f1508627b
+meta:
+  author: phil
+  description: Detects process discovery commands
+  title: Process Discovery
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1057/T1057.md
+and: true
+enabled: true
+rules:
+  exe_file:
+    data:
+      - /ps
+      - /top
+    type: endswith
+source: process
+system: linux
+level: informational
+tags:
+  - attack.discovery
+  - attack.t1057

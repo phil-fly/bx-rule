@@ -1,0 +1,27 @@
+id: c21c4eaa-ba2e-419a-92b2-8371703cbe21
+meta:
+  author: phil
+  description: Detects suspicious change of file privileges with chown and chmod commands.
+  title: Setuid and Setgid
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1166/T1166.md
+    - https://attack.mitre.org/techniques/T1166/
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  argv:
+    data:
+      - chown root
+      - chmod u+s
+      - chmod g+s
+    type: contains
+source: process
+system: linux
+level: medium
+tags:
+  - attack.privilege_escalation
+  - attack.t1548.001

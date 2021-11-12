@@ -1,0 +1,80 @@
+[
+  {
+    "id": "676381a6-15ca-4d73-a9c8-6a22e970b90d",
+    "meta": {
+      "author": "phil",
+      "description": "Detects enumeration of local system groups.",
+      "title": "Local Groups Discovery",
+      "references":[
+          "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.001/T1069.001.md"
+      ]
+    },
+    "and": true,
+    "enabled": true,
+    "rules": {
+      "data_type": {
+        "data": [
+          "1002"
+        ],
+        "type": "number"
+      },
+      "exe_file": {
+        "data": [
+          "/groups"
+        ],
+        "type": "endswith"
+      }
+    },
+
+    "tars":[
+        "attack.discovery",
+        "attack.t1069.001"
+    ],
+    "level":"low",
+
+    "source": "process",
+    "system": "linux"
+  },
+  {
+    "id": "676381a6-15ca-4d73-a9c8-6a22e970b91d",
+    "meta": {
+      "author": "phil",
+      "description": "Detects enumeration of local system groups.",
+      "title": "Local Groups Discovery",
+      "references":[
+          "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1069.001/T1069.001.md"
+      ]
+    },
+    "and": true,
+    "enabled": true,
+    "rules": {
+      "data_type": {
+        "data": [
+          "1002"
+        ],
+        "type": "number"
+      },
+      "exe_file": {
+        "data": [
+          "/cat"
+        ],
+        "type": "endswith"
+      },
+      "argv": {
+        "data": [
+          "/etc/group"
+        ],
+        "type": "contains"
+      }
+    },
+
+    "tars":[
+        "attack.discovery",
+        "attack.t1069.001"
+    ],
+    "level":"low",
+
+    "source": "process",
+    "system": "linux"
+  }
+]

@@ -1,0 +1,27 @@
+id: fdc88d25-96fb-4b7c-9633-c0e417fdbd4d
+meta:
+  author: phil
+  description: On Linux, auditd can alert every time a user's actual ID and effective ID are different (this is what happens when you sudo).
+  title: Suid Privilege Escalation 
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  uid:
+    data:
+      - '0'
+    type: number
+    notIs: true
+  euid:
+    data:
+      - '0'
+    type: number
+source: process
+system: linux
+tags:
+  - attack.privilege_escalation
+  - attack.t1548.002
+

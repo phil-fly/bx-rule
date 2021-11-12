@@ -1,0 +1,20 @@
+id: e2072cab-8c9a-459b-b63c-40ae79e27031
+meta:
+  author: phil
+  description: Detects usage of base64 utility to decode arbitrary base64-encoded text.
+  title: Decode Base64 Encoded Text
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1027/T1027.md
+and: true
+enabled: true
+rules:
+  exe_file:
+    data:
+      - /base64
+    type: endswith
+source: process
+system: linux
+level: low
+tags:
+  - attack.defense_evasion
+  - attack.t1027

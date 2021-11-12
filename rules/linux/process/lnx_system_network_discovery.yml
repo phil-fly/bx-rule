@@ -1,0 +1,30 @@
+id: 3e102cd9-a70d-4a7a-9508-403911092f31
+meta:
+  author: phil
+  description: Detects enumeration of local network configuration
+  title: System Network Discovery
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  exe_file:
+    data:
+      - '/firewall-cmd'
+      - '/ufw'
+      - '/iptables'
+      - '/netstat'
+      - '/ss'
+      - '/ip'
+      - '/ifconfig'
+      - '/systemd-resolve'
+      - '/route'
+    type: endswith
+source: process
+system: linux
+level: informational
+tags:
+    - attack.discovery
+    - attack.t1016

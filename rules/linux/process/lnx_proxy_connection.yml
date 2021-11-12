@@ -1,0 +1,24 @@
+id: 11063ec2-de63-4153-935e-b1a8b9e616f1
+meta:
+  author: phil
+  description: Detects setting proxy.
+  title: Connection Proxy
+  references:
+    - 'https://attack.mitre.org/techniques/T1090/'
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  argv:
+    data:
+      - http_proxy=
+      - https_proxy=
+    type: contains
+tars:
+  - attack.defense_evasion
+level: low
+source: process
+system: linux

@@ -1,0 +1,80 @@
+[
+    {
+      "id": "11063ec2-de63-4153-935e-b1a8b9e616f1",
+      "meta": {
+        "author": "phil",
+        "description": "Detects the enumeration of other remote systems.",
+        "title": "Linux Remote System Discovery",
+        "references":[
+            "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.md"
+        ]
+      },
+      "and": true,
+      "enabled": true,
+      "rules": {
+        "data_type": {
+          "data": [
+            "1002"
+          ],
+          "type": "number"
+        },
+        "exe_file": {
+          "data": [
+            "/ping"
+          ],
+          "type": "endswith"
+        }
+      },
+
+      "tars":[
+          "attack.discovery",
+          "attack.t1018"
+      ],
+      "level":"low",
+
+      "source": "process",
+      "system": "linux"
+    },
+    {
+        "id": "11063ec2-de63-4153-935e-b1a8b9e616f2",
+        "meta": {
+          "author": "phil",
+          "description": "Detects the enumeration of other remote systems.",
+          "title": "Linux Remote System Discovery",
+          "references":[
+            "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1018/T1018.md"
+            ]
+        },
+        "and": true,
+        "enabled": true,
+        "rules": {
+          "data_type": {
+            "data": [
+              "1002"
+            ],
+            "type": "number"
+          },
+          "exe_file": {
+            "data": [
+              "/arp"
+            ],
+            "type": "endswith"
+          },
+          "argv": {
+            "data": [
+              "-a"
+            ],
+            "type": "contains"
+          }
+        },
+  
+        "tars":[
+            "attack.discovery",
+            "attack.t1018"
+        ],
+        "level":"low",
+        
+        "source": "process",
+        "system": "linux"
+      }
+  ]

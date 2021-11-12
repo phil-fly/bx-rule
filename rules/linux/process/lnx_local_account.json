@@ -1,0 +1,124 @@
+[
+    {
+      "id": "b45e3d6f-42c6-47d8-a478-df6bd6cf534c",
+      "meta": {
+        "author": "phil",
+        "description": "Detects enumeration of local systeam accounts.",
+        "title": "Local System Accounts Discovery",
+        "references":[
+            "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.md"
+        ]
+      },
+      "and": true,
+      "enabled": true,
+      "rules": {
+        "data_type": {
+          "data": [
+            "1002"
+          ],
+          "type": "number"
+        },
+        "exe_file": {
+          "data": [
+            "/lastlog",
+            "/id"
+          ],
+          "type": "endswith"
+        }
+      },
+  
+      "tars":[
+          "attack.discovery",
+          "attack.t1087.001"
+      ],
+      "level":"low",
+  
+      "source": "process",
+      "system": "linux"
+    },
+    {
+      "id": "b45e3d6f-42c6-47d8-a478-df6bd6cf534d",
+      "meta": {
+        "author": "phil",
+        "description": "Detects enumeration of local systeam accounts.",
+        "title": "Local System Accounts Discovery",
+        "references":[
+            "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.md"
+        ]
+      },
+      "and": true,
+      "enabled": true,
+      "rules": {
+        "data_type": {
+          "data": [
+            "1002"
+          ],
+          "type": "number"
+        },
+        "exe_file": {
+          "data": [
+            "/cat"
+          ],
+          "type": "endswith"
+        },
+        "argv": {
+          "data": [
+            "/etc/passwd",
+            "/etc/sudoers"
+          ],
+          "type": "contains"
+        }
+      },
+  
+      "tars":[
+          "attack.discovery",
+          "attack.t1069.001"
+      ],
+      "level":"low",
+  
+      "source": "process",
+      "system": "linux"
+    },
+    {
+        "id": "b45e3d6f-42c6-47d8-a478-df6bd6cf534e",
+        "meta": {
+          "author": "phil",
+          "description": "Detects enumeration of local systeam accounts.",
+          "title": "Local System Accounts Discovery",
+          "references":[
+              "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1087.001/T1087.001.md"
+          ]
+        },
+        "and": true,
+        "enabled": true,
+        "rules": {
+          "data_type": {
+            "data": [
+              "1002"
+            ],
+            "type": "number"
+          },
+          "exe_file": {
+            "data": [
+              "/lsof"
+            ],
+            "type": "endswith"
+          },
+          "argv": {
+            "data": [
+              "-u"
+            ],
+            "type": "contains"
+          }
+        },
+    
+        "tars":[
+            "attack.discovery",
+            "attack.t1069.001"
+        ],
+        "level":"low",
+    
+        "source": "process",
+        "system": "linux"
+    }
+]

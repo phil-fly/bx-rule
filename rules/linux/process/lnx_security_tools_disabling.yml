@@ -1,0 +1,27 @@
+id: e2072cab-8c9a-459b-b63c-40ae79e27031
+meta:
+  author: phil
+  description: Detects disabling security tools.
+  title: Disabling Security Tools
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1562.004/T1562.004.md
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  argv:
+    data:
+      - stop iptables
+      - iptables -F
+      - stop ip6tables
+      - stop firewalld
+    type: contains
+source: process
+system: linux
+level: medium
+tags:
+  - attack.defense_evasion
+  - attack.t1562.004
