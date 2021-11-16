@@ -8,6 +8,10 @@ meta:
 and: true
 enabled: true
 rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
   exe_file:
     data:
       - /uname

@@ -1,0 +1,19 @@
+id: d2d642d7-b393-43fe-bae4-e81ed5915c11
+meta:
+  author: phil
+  description: 被控端发起请求到该端口，并将其命令行的输入输出转到控制端.
+  title: reverse shell
+and: true
+enabled: true
+rules:
+  exe_file:
+    data:
+      - '/bash'
+    type: endswith
+  data_type:
+    data:
+      - '3001'
+    type: number
+source: net
+system: linux
+level: high

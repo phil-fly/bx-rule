@@ -1,0 +1,26 @@
+id: fdc88d25-96fb-4b7c-9633-c11417fdbd4d
+meta:
+  author: phil
+  description: nil.
+  title: 可疑定时任务命令 
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  exe_file:
+    data:
+      - '/bash'
+    type: endswith
+  argv:
+    data:
+      - '\/dev\/tcp\/([^/]+)\/(\d*)'
+    type: regexp
+  parent_name:
+    data:
+      - 'crond'
+    type: string
+source: process
+system: linux
