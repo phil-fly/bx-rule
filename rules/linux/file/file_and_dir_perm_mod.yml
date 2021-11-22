@@ -1,0 +1,20 @@
+id: 30aed7b6-d2c1-4eaf-9382-b6bc43e50c57
+meta:
+  author: phil
+  description: File and Directory Permissions Modification
+  title: File and Directory Permissions Modification
+  references:
+    - https://attack.mitre.org/techniques/T1222/
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '2003'
+    type: number
+source: file
+system: linux
+level: informational
+tags:
+  - attack.defense_evasion
+  - attack.t1222.001

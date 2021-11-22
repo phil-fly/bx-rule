@@ -1,0 +1,28 @@
+id: 7a14080d-a048-4de8-ae58-604ce58a795b
+meta:
+  author: phil
+  description: Detects the use of tools that copy files from or to remote systems
+  title: Remote File Copy
+  references:
+    - https://attack.mitre.org/techniques/T1105/
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  argv:
+    data:
+      - 'scp '
+      - 'rsync '
+      - 'sftp '
+      - 'ftp '
+    type: startswith
+source: process
+system: linux
+level: informational
+tags:
+    - attack.command_and_control
+    - attack.lateral_movement
+    - attack.t1105

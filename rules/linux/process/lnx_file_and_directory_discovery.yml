@@ -1,0 +1,27 @@
+id: d3feb4ee-ff1d-4d3d-bd10-5b28a238cc72
+meta:
+  author: phil
+  description: Detects usage of system utilities to discover files and directories.
+  title: File and Directory Discovery
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1083/T1083.md
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  exe_file:
+    data:
+      - /find
+      - /file
+      - /ls
+      - /tree
+    type: endswith
+source: process
+system: linux
+level: informational
+tags:
+  - attack.discovery
+  - attack.t1083
