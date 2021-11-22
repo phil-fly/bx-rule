@@ -1,0 +1,23 @@
+id: e2072cab-339a-459b-b63c-40ae79e27131
+meta:
+  author: phil
+  description: Service Stop.
+  title: System Shutdown/Reboot
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  exe_file:
+    data:
+      - /reboot
+      - /shutdown
+    type: endswith
+source: process
+system: linux
+level: medium
+tags:
+  - attack.impact
+  - attack.t1529

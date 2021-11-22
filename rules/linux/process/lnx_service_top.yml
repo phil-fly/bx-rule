@@ -1,0 +1,26 @@
+id: e2072cab-8c9a-459b-b63c-40ae79e27131
+meta:
+  author: phil
+  description: Service Stop.
+  title: Service Stop
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  exe_file:
+    data:
+      - /systemctl
+    type: endswith
+  argv:
+    data:
+      - ' stop '
+    type: contains
+source: process
+system: linux
+level: medium
+tags:
+  - attack.impact
+  - attack.t1489

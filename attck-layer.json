@@ -241,6 +241,15 @@
 			"showSubtechniques": false
 		},
 		{
+			"techniqueID": "T1136",
+			"tactic": "persistence",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
 			"techniqueID": "T1083",
 			"tactic": "discovery",
 			"color": "#6baed6",
@@ -295,6 +304,15 @@
 			"showSubtechniques": false
 		},
 		{
+			"techniqueID": "T1489",
+			"tactic": "impact",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
 			"techniqueID": "T1016.001",
 			"tactic": "discovery",
 			"color": "#6baed6",
@@ -315,6 +333,15 @@
 		{
 			"techniqueID": "T1007",
 			"tactic": "discovery",
+			"color": "#6baed6",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1529",
+			"tactic": "impact",
 			"color": "#6baed6",
 			"comment": "",
 			"enabled": true,

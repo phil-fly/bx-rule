@@ -77,3 +77,12 @@
 
 ### t1136.001
 - [Creation Of A Local User Account](rules/linux/process/lnx_create_account.yml)
+
+
+## impect
+
+### t1489
+- [Service Stop](rules/linux/process/lnx_service_top.yml)
+
+### T1529
+- [System Shutdown/Reboot](rules/linux/process/lnx_system_reboot.yml)
