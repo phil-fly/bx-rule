@@ -68,7 +68,12 @@
 ## execution
 
 ### 1053.003
-- [Scheduled Cron Task/Job](rules/linux/lnx_schedule_task_job_cron.yml)
+- [Scheduled Cron Task/Job](rules/linux/process/lnx_schedule_task_job_cron.yml)
 
 
+## persistence
+### 1053.003
+- [Scheduled Cron Task/Job](rules/linux/process/lnx_schedule_task_job_cron.yml)
 
+### t1136.001
+- [Creation Of A Local User Account](rules/linux/process/lnx_create_account.yml)

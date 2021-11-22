@@ -1,0 +1,24 @@
+id: 51719bf5-e4fd-4e44-8ba8-b830e7ac0731
+meta:
+  author: phil
+  description: Detects the creation of a new user account. Such accounts may be used for persistence that do not require persistent remote access tools to be deployed on the system.
+  title: Creation Of A Local User Account
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.md
+and: true
+enabled: true
+rules:
+  data_type:
+    data:
+      - '1002'
+    type: number
+  exe_file:
+    data:
+      - '/useradd'
+    type: endswith
+source: process
+system: linux
+level: informational
+tags:
+    - attack.persistence
+    - attack.t1136.001
