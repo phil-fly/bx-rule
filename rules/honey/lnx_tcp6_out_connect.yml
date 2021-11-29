@@ -1,0 +1,17 @@
+id: b2bb9bbc-fb4b-ff41-1b78-02959daa5eb3
+meta:
+  author: phil
+  description: honey Tcp6 OutConnect
+  title: Tcp6 OutConnect
+and: true
+enabled: true
+rules:
+  DataType:
+    data:
+      - '3004'
+    type: string
+source: net
+system: linux
+level: informational
+tags:
+  - honey.outConnect

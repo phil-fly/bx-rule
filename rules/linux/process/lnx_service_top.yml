@@ -6,15 +6,15 @@ meta:
 and: true
 enabled: true
 rules:
-  data_type:
+  DataType:
     data:
       - '1002'
-    type: number
-  exe_file:
+    type: string
+  Image:
     data:
       - /systemctl
     type: endswith
-  argv:
+  Argv:
     data:
       - ' stop '
     type: contains

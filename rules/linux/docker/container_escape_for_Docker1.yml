@@ -1,0 +1,24 @@
+id: e2072cab-8c9a-459b-b63c-40ae79e27077
+meta:
+  author: phil
+  description: .
+  title: 疑似docker逃逸操作
+and: true
+enabled: true
+rules:
+  DataType:
+    data:
+      - "2002"
+    type: string
+  TargetFile:
+    data:
+      - "/var/spool/cron/"
+    type: contains
+  DockerName:
+    data:
+      - localhost
+    type: string
+    notIs: true
+source: file
+system: linux
+level: high

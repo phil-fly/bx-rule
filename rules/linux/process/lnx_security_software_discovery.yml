@@ -8,15 +8,15 @@ meta:
 and: true
 enabled: true
 rules:
-  data_type:
+  DataType:
     data:
       - '1002'
-    type: number
-  exe_file:
+    type: string
+  Image:
     data:
       - /grep
     type: endswith
-  argv:
+  Argv:
     data:
       - 'nessusd'        # nessus vulnerability scanner
       - 'td-agent'       # fluentd log shipper

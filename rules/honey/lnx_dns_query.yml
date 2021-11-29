@@ -1,0 +1,17 @@
+id: 18c6d3fd-ccfc-80fc-842b-724a33461629
+meta:
+  author: phil
+  description: honey Dns Query
+  title: Dns Query
+and: true
+enabled: true
+rules:
+  DataType:
+    data:
+      - '3010'
+    type: string
+source: net
+system: linux
+level: informational
+tags:
+  - honey.dns

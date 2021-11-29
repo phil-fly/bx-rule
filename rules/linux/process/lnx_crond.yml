@@ -6,19 +6,19 @@ meta:
 and: true
 enabled: true
 rules:
-  data_type:
+  DataType:
     data:
       - '1002'
-    type: number
-  exe_file:
+    type: string
+  Image:
     data:
       - '/bash'
     type: endswith
-  argv:
+  Argv:
     data:
       - '\/dev\/tcp\/([^/]+)\/(\d*)'
     type: regexp
-  parent_name:
+  ParentName:
     data:
       - 'crond'
     type: string

@@ -8,10 +8,10 @@ meta:
 and: true
 enabled: true
 rules:
-  data_type:
+  DataType:
     data:
       - '2003'
-    type: number
+    type: string
 source: file
 system: linux
 level: informational

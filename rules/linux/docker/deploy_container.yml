@@ -1,0 +1,22 @@
+id: e2072cab-8c9a-459b-b63c-40ae79e11077
+meta:
+  author: phil
+  description: adversary may deploy a new container configured without network rules, user limitations, etc. to bypass existing defenses within the environment.
+  title: deploy container
+and: true
+enabled: true
+rules:
+  pid:
+    data:
+      - '1'
+    type: string
+  ParentName:
+    data:
+      - "containerd-shim"
+    type: string
+source: process
+system: linux
+level: high
+tags:
+  - attack.execution
+  - attack.t1610

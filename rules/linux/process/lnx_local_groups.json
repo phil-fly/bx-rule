@@ -12,13 +12,13 @@
     "and": true,
     "enabled": true,
     "rules": {
-      "data_type": {
+      "DataType": {
         "data": [
           "1002"
         ],
-        "type": "number"
+        "type": "string"
       },
-      "exe_file": {
+      "Image": {
         "data": [
           "/groups"
         ],
@@ -48,19 +48,19 @@
     "and": true,
     "enabled": true,
     "rules": {
-      "data_type": {
+      "DataType": {
         "data": [
           "1002"
         ],
-        "type": "number"
+        "type": "string"
       },
-      "exe_file": {
+      "Image": {
         "data": [
           "/cat"
         ],
         "type": "endswith"
       },
-      "argv": {
+      "Argv": {
         "data": [
           "/etc/group"
         ],

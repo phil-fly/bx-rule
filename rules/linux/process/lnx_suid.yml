@@ -6,19 +6,19 @@ meta:
 and: true
 enabled: true
 rules:
-  data_type:
+  DataType:
     data:
       - '1002'
-    type: number
+    type: string
   uid:
     data:
       - '0'
-    type: number
+    type: string
     notIs: true
   euid:
     data:
       - '0'
-    type: number
+    type: string
 source: process
 system: linux
 tags:

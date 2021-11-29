@@ -9,11 +9,11 @@ meta:
 and: true
 enabled: true
 rules:
-  data_type:
+  DataType:
     data:
       - '1002'
-    type: number
-  argv:
+    type: string
+  Argv:
     data:
       - chown root
       - chmod u+s

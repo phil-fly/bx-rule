@@ -1,0 +1,17 @@
+id: 8111513d-f96a-6888-51db-8ab8f1b59934
+meta:
+  author: phil
+  description: honey OutConnect
+  title: Tcp4 OutConnect
+and: true
+enabled: true
+rules:
+  DataType:
+    data:
+      - '3001'
+    type: string
+source: net
+system: linux
+level: informational
+tags:
+  - honey.outConnect

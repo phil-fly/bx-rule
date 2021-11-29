@@ -1,0 +1,22 @@
+id: e2072cab-8c9a-459b-b63c-40ae79e27032
+meta:
+  author: phil
+  description: Containerd 逃逸 CVE-2020-15257.
+  title: Containerd 逃逸
+and: true
+enabled: true
+rules:
+  ParentName:
+    data:
+      - runc
+    type: endswith
+  Argv:
+    data:
+      - "bash -c "
+    type:
+      - startswith
+source: process
+system: linux
+level: high
+tars:
+  - cve.CVE-2020-15257
