@@ -1,0 +1,28 @@
+id: e414feac-5ecb-4adb-034d-cf1563d40cea
+meta:
+  author: phil
+  description: 混淆从有效载荷执行的命令或直接通过命令行界面执行的命令.
+  title: Ping Hex IP
+  references:
+    - https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_ping_hex_ip.yml
+and: true
+enabled: true
+rules:
+  EventID:
+    data:
+      - 'ProcessCreate'
+    type: string
+  OriginalFileName:
+    data:
+      - 'ping.exe'
+    type: string
+  CommandLine:
+    data:
+      - '0x'
+    type: contains
+source: sysmon
+system: windows
+level: high
+tags:
+    - attack.defense_evasion
+    - attack.t1027.003

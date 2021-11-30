@@ -22,7 +22,7 @@ windows 安全日志/sysmon日志
 
 windows 2012以上操作系统
 
-![ping1](https://i.postimg.cc/SKRFh1KT/1.png)
+cmd: ping 0x31302e31
 
 ## 测试留痕
 

@@ -1,0 +1,22 @@
+id: d260492f-b0ee-b090-2e8b-d35b8901559c
+meta:
+  author: phil
+  description: 攻击者可能试图阻止由监测软件或进程捕获到的告警，以及事件日志被收集和分析。
+  title: 使用wevtutil命令删除数据
+and: true
+enabled: true
+rules:
+  Image:
+    data:
+      - 'wevtutil.exe'
+    type: endswith
+  CommandLine:
+    data:
+      - ' cl '
+    type: contains
+source: sysmon
+system: windows
+level: high
+tags:
+    - attack.defense_evasion
+    - attack.t1070.001

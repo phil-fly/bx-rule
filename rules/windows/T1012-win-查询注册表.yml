@@ -1,0 +1,28 @@
+id: 376b3654-95e4-e911-ee06-c0b6cd34c3a8
+meta:
+  author: phil
+  description: 攻击者可以与Windows注册表交互，以收集有关系统、配置和已安装软件的信息.
+  title: windows查询注册表
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/910a2a764a66b0905065d8bdedb04b37049a85db/atomics/T1012/T1012.md
+and: true
+enabled: true
+rules:
+  EventID:
+    data:
+      - 'ProcessCreate'
+    type: string
+  OriginalFileName:
+    data:
+      - 'reg.exe'
+    type: string
+  CommandLine:
+    data:
+      - ' query '
+    type: contains
+source: sysmon
+system: windows
+level: high
+tags:
+    - attack.defense_evasion
+    - attack.t1012

@@ -1,0 +1,22 @@
+id: cb4c81ff-eaa5-3fae-e7ae-51c8c3636b94
+meta:
+  author: phil
+  description: windows server 2016模拟测试。该检测方式来源于Microsoft 365 Defender威胁情报团队威胁分析报告中，勒索软件继续冲击医疗保健和关键服务。
+  title: 检测cipher.exe删除数据
+and: true
+enabled: true
+rules:
+  CommandLine:
+    data:
+      - '/w'
+    type: contains
+  Image:
+    data:
+      - '/cipher.exe'
+    type: endswith
+source: sysmon
+system: windows
+level: medium
+tags:
+    - attack.defense_evasion
+    - attack.t1070.001

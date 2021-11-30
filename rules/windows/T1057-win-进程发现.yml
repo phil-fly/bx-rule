@@ -1,0 +1,25 @@
+id: e414feac-5ecb-4adb-034d-cf1563d40cea
+meta:
+  author: phil
+  description: windows本地执行Tasklist.
+  title: windows本地执行Tasklist
+  references:
+    - https://github.com/redcanaryco/atomic-red-team/blob/910a2a764a66b0905065d8bdedb04b37049a85db/atomics/T1057/T1057.md
+and: true
+enabled: true
+rules:
+  EventID:
+    data:
+      - 'ProcessCreate'
+      - 'ProcessAccess'
+    type: string
+  OriginalFileName:
+    data:
+      - 'tasklist.exe'
+    type: string
+source: sysmon
+system: windows
+level: high
+tags:
+    - attack.defense_evasion
+    - attack.t1057
