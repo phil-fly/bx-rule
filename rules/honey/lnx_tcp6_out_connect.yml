@@ -6,7 +6,7 @@ meta:
 and: true
 enabled: true
 rules:
-  DataType:
+  EventID:
     data:
       - '3004'
     type: string

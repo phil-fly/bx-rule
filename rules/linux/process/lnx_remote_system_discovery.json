@@ -12,7 +12,7 @@
       "and": true,
       "enabled": true,
       "rules": {
-        "DataType": {
+        "EventID": {
           "data": [
             "1002"
           ],
@@ -48,7 +48,7 @@
         "and": true,
         "enabled": true,
         "rules": {
-          "DataType": {
+          "EventID": {
             "data": [
               "1002"
             ],

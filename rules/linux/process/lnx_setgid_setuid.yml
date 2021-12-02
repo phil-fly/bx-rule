@@ -9,7 +9,7 @@ meta:
 and: true
 enabled: true
 rules:
-  DataType:
+  EventID:
     data:
       - '1002'
     type: string

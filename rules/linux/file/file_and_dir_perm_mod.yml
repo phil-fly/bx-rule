@@ -8,7 +8,7 @@ meta:
 and: true
 enabled: true
 rules:
-  DataType:
+  EventID:
     data:
       - '2003'
     type: string

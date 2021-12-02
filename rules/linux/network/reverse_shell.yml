@@ -10,7 +10,7 @@ rules:
     data:
       - '/bash'
     type: endswith
-  DataType:
+  EventID:
     data:
       - '3001'
     type: string
