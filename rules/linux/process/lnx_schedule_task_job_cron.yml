@@ -16,7 +16,7 @@ rules:
     data:
       - /crontab
     type: endswith
-  Argv:
+  CommandLine:
     data:
       - /tmp/
     type: contains

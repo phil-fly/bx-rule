@@ -16,7 +16,7 @@ rules:
     data:
       - /grep
     type: endswith
-  Argv:
+  CommandLine:
     data:
       - 'nessusd'        # nessus vulnerability scanner
       - 'td-agent'       # fluentd log shipper

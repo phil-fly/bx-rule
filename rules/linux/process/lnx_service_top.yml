@@ -14,7 +14,7 @@ rules:
     data:
       - /systemctl
     type: endswith
-  Argv:
+  CommandLine:
     data:
       - ' stop '
     type: contains

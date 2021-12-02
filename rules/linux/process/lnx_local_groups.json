@@ -60,7 +60,7 @@
         ],
         "type": "endswith"
       },
-      "Argv": {
+      "CommandLine": {
         "data": [
           "/etc/group"
         ],

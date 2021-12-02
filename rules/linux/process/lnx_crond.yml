@@ -14,7 +14,7 @@ rules:
     data:
       - '/bash'
     type: endswith
-  Argv:
+  CommandLine:
     data:
       - '\/dev\/tcp\/([^/]+)\/(\d*)'
     type: regexp

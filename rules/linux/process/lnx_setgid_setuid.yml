@@ -13,7 +13,7 @@ rules:
     data:
       - '1002'
     type: string
-  Argv:
+  CommandLine:
     data:
       - chown root
       - chmod u+s

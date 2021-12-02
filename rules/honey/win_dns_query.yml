@@ -1,4 +1,4 @@
-id: 18c6d3fd-ccfc-80fc-842b-724a33461629
+id: 77c11616-30bf-d027-a4fd-8053dbed4325
 meta:
   author: phil
   description: honey Dns Query
@@ -8,10 +8,11 @@ enabled: true
 rules:
   EventID:
     data:
-      - '3010'
+      - 'DNSQuery'
+      - '22'
     type: string
-source: net
-system: linux
+source: sysmon
+system: windows
 level: informational
 tags:
   - honey.dnsQuery

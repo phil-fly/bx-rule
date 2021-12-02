@@ -10,7 +10,7 @@ rules:
     data:
       - runc
     type: endswith
-  Argv:
+  CommandLine:
     data:
       - "bash -c "
     type:
