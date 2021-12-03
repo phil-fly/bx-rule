@@ -1,5 +1,8 @@
-# bx-rule
-百晓HIDS规则
+# 百晓安全-云影EDR规则
+
+![](images/bx1.png)
+
+云影EDR规则
 
 
 # ATT&CK覆盖
