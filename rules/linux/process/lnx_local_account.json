@@ -27,7 +27,7 @@
         }
       },
   
-      "tars":[
+      "tags":[
           "attack.discovery",
           "attack.t1087.001"
       ],
@@ -70,7 +70,7 @@
         }
       },
   
-      "tars":[
+      "tags":[
           "attack.discovery",
           "attack.t1069.001"
       ],
@@ -112,7 +112,7 @@
           }
         },
     
-        "tars":[
+        "tags":[
             "attack.discovery",
             "attack.t1069.001"
         ],
