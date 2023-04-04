@@ -9,7 +9,8 @@
 
 ## discovery
 ### t1087.001
-- [Local System Accounts Discovery](rules/linux/process/lnx_local_account.jsonlnx_local_account.json)
+- [Local System Accounts Discovery](rules/linux/process/lnx_local_account.json)
+
 ### t1069.001
 - [Local Groups Discovery](rules/linux/process/lnx_local_groups.json)
 
