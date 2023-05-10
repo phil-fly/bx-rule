@@ -1,6 +1,5 @@
 # 百晓安全-云影EDR规则
 
-![](images/bx1.png)
 
 云影EDR规则
 
